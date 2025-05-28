@@ -13,6 +13,8 @@ class Calculator {
             return firstNumber * secondNumber
         case "/":
             return firstNumber / secondNumber
+        case "%":
+            return firstNumber.truncatingRemainder(dividingBy: secondNumber)
         default:
             return 0
             //특수상황에 예외처리
@@ -26,7 +28,7 @@ class Calculator {
 let calculator = Calculator()
 
 //인스턴스.메서드(매개변수)를 활용해 출력
-var addResult = calculator.calculate(op: "+", firstNumber: 4, secondNumber: 3)
+var addResult = calculator.calculate(op: "%", firstNumber: 8, secondNumber: 3)
 print(addResult)
 
 
