@@ -1,36 +1,36 @@
-protocol ExecuteOperation {
+protocol AbstractOperation {
     func execute(_ a: Double, _ b: Double) -> Double
 }
 
-class AddOperation: ExecuteOperation {
+class AddOperation: AbstractOperation {
     func execute(_ a: Double, _ b: Double) -> Double {
         return a + b
     }
 }
 
-class SubtractOperation: ExecuteOperation {
+class SubtractOperation: AbstractOperation {
     func execute(_ a: Double, _ b: Double) -> Double {
         return a - b
     }
     
 }
 
-class MultiplyOperation: ExecuteOperation {
+class MultiplyOperation: AbstractOperation {
     func execute(_ a: Double, _ b: Double) -> Double {
         return a * b
     }
 }
 
-class DivideOperation: ExecuteOperation {
+class DivideOperation: AbstractOperation {
     func execute(_ a: Double, _ b: Double) -> Double {
         return a / b
     }
 }
 
 class Calculator {
-    private var op: ExecuteOperation
+    private var op: AbstractOperation
     
-    init(op: ExecuteOperation) {
+    init(op: AbstractOperation) {
         self.op = op
     }
     
