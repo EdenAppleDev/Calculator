@@ -1,7 +1,7 @@
 class Calculator {
     
     // 3개의 매개변수를 사용하고 Int로 반환
-    func calculate(op: String, firstNumber: Int, secondNumber: Int) -> Int{
+    func calculate(op: String, firstNumber: Double, secondNumber: Double) -> Double{
         
         //switch 문으로 op값에 맞게 계산
         switch op {
@@ -21,7 +21,6 @@ class Calculator {
     }
     
 }
-
 
 //인스턴스 생성
 let calculator = Calculator()
